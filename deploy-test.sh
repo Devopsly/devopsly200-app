@@ -2,8 +2,9 @@ startingPort=8000
 buildNumber=${BUILD_NUMBER}
 port=$((startingPort + buildNumber))
 version=${BUILD_ID}
-marathon="35.163.154.240"
-
+#marathon="35.163.154.240"
+marathon=$(curl http://myip.dnsomatic.com)
+echo ${marathon}
 
 echo Deleting
 # destroy old application
