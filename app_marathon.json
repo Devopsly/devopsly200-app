@@ -5,7 +5,7 @@
         "image": "localhost:5000/containersol/nodejs_app:latest",
         "network": "BRIDGE",
         "portMappings": [
-          {"containerPort": 8000, "hostPort": 31300, "servicePort": 8000}
+          {"containerPort": 8000, "hostPort": 31200, "servicePort": 8000}
         ]
       }
     },
