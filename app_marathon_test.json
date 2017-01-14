@@ -1,11 +1,11 @@
 {
-    "id": "microservice2-test", 
+    "id": "app-test", 
     "container": {
       "docker": {
-        "image": "localhost:5000/devopsly200-microservice2-teststage",
+        "image": "localhost:5000/devopsly200-app-teststage",
         "network": "BRIDGE",
         "portMappings": [
-          {"containerPort": 8000, "hostPort": 31300, "servicePort": 8000}
+          {"containerPort": 8000, "hostPort": 31200, "servicePort": 8000}
         ]
       }
     },

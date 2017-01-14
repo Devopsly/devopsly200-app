@@ -1,11 +1,11 @@
 {
-    "id": "microservice2-production", 
+    "id": "app-production", 
     "container": {
       "docker": {
-        "image": "localhost:5000/devopsly200-microservice2-productionstage",
+        "image": "localhost:5000/devopsly200-app-productionstage",
         "network": "BRIDGE",
         "portMappings": [
-          {"containerPort": 8000, "hostPort": 31350, "servicePort": 8000}
+          {"containerPort": 8000, "hostPort": 31250, "servicePort": 8000}
         ]
       }
     },
