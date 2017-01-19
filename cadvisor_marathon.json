@@ -1,0 +1,50 @@
+{
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "google/cadvisor:latest"
+    },
+    "volumes": [
+      {
+        "containerPath": "/rootfs",
+        "hostPath": "/",
+        "mode": "RO"
+      },
+      {
+        "containerPath": "/var/run",
+        "hostPath": "/var/run",
+        "mode": "RW"
+      },
+      {
+        "containerPath": "/sys",
+        "hostPath": "/sys",
+        "mode": "RO"
+      },
+      {
+        "containerPath": "/var/lib/docker",
+        "hostPath": "/var/lib/docker",
+        "mode": "RO"
+      },
+      {
+        "containerPath": "/cgroup",
+        "hostPath": "/cgroup",
+        "mode": "RO"
+      }
+    ],
+    "network": "BRIDGE",
+    "portMappings": [
+      { "containerPort": "0.0.0.0:8080", "hostPort": "0.0.0.0:8082", "protocol": "tcp" }
+    ]
+  },
+  "id": "cadvisor",
+  "instances": 1,
+  "cpus": 0.1,
+  "mem": 512,
+  "constraints": [
+    [
+      "hostname",
+      "UNIQUE"
+    ]
+  ]
+}
+
